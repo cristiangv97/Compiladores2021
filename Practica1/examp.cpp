@@ -1,24 +1,22 @@
-// classes example
 #include <iostream>
-using namespace std;
+#include <stdlib.h>
 
-class Rectangle
-{
-  int width, height;
+class automataFN{
+private: // Atributos
+    string cadena;
 
 public:
-  void set_values(int, int);
-  int area() { return width * height; }
+    void automataFN(string)
+    void validacionCadena();
+
 };
 
-void Rectangle::set_values(int x, int y)
-{
-  width = x;
-  height = y;
+automataFN::automataFN(string _cadena){
+    cadena = _cadena;
 }
 
-int main()
-{
+
+int main(){
   Rectangle rect;
   rect.set_values(3, 4);
   cout << "area: " << rect.area();
