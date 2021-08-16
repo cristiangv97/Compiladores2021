@@ -1,24 +1,32 @@
 #include <iostream>
 #include <stdlib.h>
 
-class automataFN{
-private: // Atributos
-    string cadena;
+class automataFD{
+    private: // Atributos
+        string conjuntoEstados[];   // Conjunto finito de estados
+        string alfabeto[];  // Alfabeto
+        string estadoInicial;  // Estado inicial en el cual el automata empezara
+        string estadosFinales[];  // Estados finales de aceptacion por el automata
 
-public:
-    void automataFN(string)
-    void validacionCadena();
+    public:
+        void automataFD(string); // metodo donde se asignara la cadena de entrada al automata
+        void movimientoCadena(string); // metodo donde se ira moviendo el apuntador de toda la cadena
+        void validacionCadena(string); // metodo donde se procesara y validara el simbolo de entrada
+        void estadoFinal(); // metodo donde se regresara el estado en el cual termino el automata
 
 };
 
-automataFN::automataFN(string _cadena){
-    cadena = _cadena;
-}
+class automataFND{
+private: // Atributos
+    string conjuntoEstados[];   // Conjunto finito de estados
+    string alfabeto[];  // Alfabeto
+    string estadoInicial;  // Estado inicial en el cual el automata empezara
+    string estadosFinales[];  // Estados finales de aceptacion por el automata
 
+public:
+    void automataFD(string); // metodo donde se asignara la cadena de entrada al automata
+    void movimientoCadena(string); // metodo donde se ira moviendo el apuntador de toda la cadena
+    void validacionCadena(string); // metodo donde se procesara y validara el simbolo de entrada
+    void estadosFinales(); // metodo donde se regresaran los estados del automata
 
-int main(){
-  Rectangle rect;
-  rect.set_values(3, 4);
-  cout << "area: " << rect.area();
-  return 0;
-}
+};
